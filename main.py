@@ -3,6 +3,8 @@ from bfs import bfs_solve
 from astar import AStarSolver
 from heuristic_hamming import Hamming
 from heuristic_manhattan import Manhattan
+from heuristic_manhattan_2 import Manhattan_2
+
 from heuristic_linear import ManhattanLinearConflict
 
 import matplotlib.pyplot as plt
@@ -91,21 +93,23 @@ def run_a_star_solver(heuristic, heuristic_name):
     
     solver = AStarSolver(heuristic)
 
-    # Solve using A* with the given heuristic
     solution_moves, explored_nodes, elapsed_time = solver.search(puzzle, goal_puzzle)
 
     if solution_moves:
         print(f"A* ({heuristic_name}) Solution found after exploring {explored_nodes} nodes in {elapsed_time:.4f} seconds")
         print(f"Moves: {solution_moves}")
 
-        # Animate the solution with a button-based progression
         manual_animation_with_button(initial_state, solution_moves)
     else:
         print(f"No solution found with A* ({heuristic_name})")
 
 
-# Main Execution
 if __name__ == "__main__":
+
+    # Run A* Solver with Manhattan Heuristic (improved version)
+    print("\nRunning A* Solver with Manhattan Heuristic (improved version):")
+    run_a_star_solver(Manhattan_2(), "Manhattan")
+
 
     # Run A* Solver with Hamming Heuristic
     print("\nRunning A* Solver with Hamming Heuristic:")
@@ -119,6 +123,7 @@ if __name__ == "__main__":
     # Run A* Solver with Manhattan Heuristic
     print("\nRunning A* Solver with Manhattan Heuristic:")
     run_a_star_solver(Manhattan(), "Manhattan")
+
 
 
 
