@@ -1,4 +1,3 @@
-# heuristic_linear.py
 
 class ManhattanLinearConflict:
     def evaluate(self, puzzle, goal_puzzle):

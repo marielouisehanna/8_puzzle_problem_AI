@@ -1,4 +1,3 @@
-# heuristic_manhattan.py
 
 class Manhattan:
     def evaluate(self, puzzle, goal_puzzle):

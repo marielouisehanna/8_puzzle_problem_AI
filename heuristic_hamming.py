@@ -1,4 +1,3 @@
-# heuristic_hamming.py
 
 class Hamming:
     def evaluate(self, puzzle, goal_puzzle):
