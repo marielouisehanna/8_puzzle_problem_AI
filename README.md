@@ -17,6 +17,10 @@ This project implements the 8-puzzle solver using the **A*** search algorithm wi
 - **`heuristic_manhattan.py`**: 🛣️  
   Implements Manhattan Distance heuristic, summing the distance each tile needs to move.
 
+- **`heuristic_manhattan_.py`**: 🛣️  
+  Implements Manhattan Distance heuristic, summing the distance each tile needs to move.
+  But this is the improved version of the previous one , it can take many form of goals (unlike the previous one)
+
 - **`heuristic_linear.py`**: 🔀💥  
   Adds Linear Conflict to Manhattan, penalizing misplaced tiles in the same row or column.
 
