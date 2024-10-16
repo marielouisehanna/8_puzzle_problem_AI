@@ -155,4 +155,3 @@ if __name__ == "__main__":
     # Run BFS Solver
     print("Running BFS Solver:")
     run_bfs_solver(goal_state)
-vv
