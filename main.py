@@ -86,7 +86,6 @@ def run_bfs_solver(goal_state):
     """Run BFS solver and display results."""
     initial_state = [[8, 0, 6], [5, 4, 7], [2, 3, 1]]  # Example initial state
     # goal_state = [[1, 2, 3], [4, 5, 6], [7, 8, 0]]  # Goal state
-    
     puzzle = EightPuzzle(initial_state)
     goal_puzzle = EightPuzzle(goal_state)
 
@@ -107,9 +106,9 @@ def run_bfs_solver(goal_state):
 def run_a_star_solver(heuristic, heuristic_name, goal_state):
     initial_state = [[8, 0, 6], [5, 4, 7], [2, 3, 1]]  # Example initial state
     # goal_state = [[1, 2, 3], [4, 5, 6], [7, 8, 0]]  # Standard goal state for 8-puzzle
+
     puzzle = EightPuzzle(initial_state)
     goal_puzzle = EightPuzzle(goal_state)
-    
     solver = AStarSolver(heuristic)
 
     solution_moves, explored_nodes, elapsed_time = solver.search(puzzle, goal_puzzle)
